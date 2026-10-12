@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Untuk Laela Febriana</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#fff;font-family:Poppins,sans-serif;display:grid;place-items:center;min-height:100vh;padding:20px}
+.cover{
+  max-width:430px;width:100%;
+  background: radial-gradient(130% 130% at 50% -20%, #2e2618, #111 70%);
+  border:1px solid rgba(255,204,102,.22);
+  border-radius:26px;
+  padding:32px 28px 40px;
+  text-align:center;
+  box-shadow:0 25px 80px rgba(0,0,0,.9);
+}
+.photo-wrap{
+  width:140px;height:140px;margin:0 auto 18px;
+  border-radius:50%;
+  padding:3px;
+  background:linear-gradient(135deg,#ffdd8a,#c8a95a);
+  box-shadow:0 0 30px rgba(255,221,138,.3);
+}
+.photo-wrap img{
+  width:100%;height:100%;object-fit:cover;border-radius:50%;
+  border:3px solid #111;
+}
+.line{width:60px;height:1px;margin:20px auto;background:linear-gradient(90deg,transparent,#c8a95a,transparent)}
+h1{font-family:Great Vibes;font-size:48px;color:#ffdd8a;font-weight:400}
+h2{font-size:10px;letter-spacing:6px;color:#c8a95a;font-weight:400;margin-top:4px}
+p{font-size:13.5px;line-height:2.1;opacity:.88;font-weight:300;margin-top:14px}
+b{color:#ffdd8a;font-weight:400}
+.italic{font-style:italic;opacity:.7}
+.small{margin-top:28px;font-size:9px;letter-spacing:3px;opacity:.35}
+#musicBtn{position:fixed;bottom:20px;right:20px;width:44px;height:44px;border-radius:50%;background:#c8a95a;color:#111;border:none;display:grid;place-items:center;font-size:18px;cursor:pointer;box-shadow:0 4px 20px rgba(0,0,0,.5);z-index:99}
+</style>
+</head>
+<body>
+
+<button id="musicBtn">🎵</button>
+<audio id="bgMusic" loop preload="auto">
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="cover">
+  <div class="photo-wrap">
+    <img src="https://i.ibb.co.com/RkqdhbVK/IMG-20260726-WA0027.jpg" alt="Laela Febriana">
+  </div>
+
+  <h2>RINDU YANG TAK SAMPAI</h2>
+  <h1>Laela Febriana</h1>
+  <div class="line"></div>
+
+  <p>
+    Feby, masih inget gak kita yang dulu?<br>
+    Ketawa kayak orang gila bareng.
+  </p>
+
+  <p>
+    Pas kamu jauh, sumpah yang aku pengen cuma sesimpel itu,<br>
+    <b>pengen ketemu, pengen peluk kamu, pengen cium pipi kamu, pengen jalan bareng kamu, nyuapin kamu, disayang sayang.</b><br>
+    Hal-hal kecil yang dulu bikin kita bahagia.<br>
+    Katanya kita mau melukis bareng, gak jadi ya sama aku hehe, gapapa kok gak sama aku, tapi aku pengen banget sama kamu.
+  </p>
+
+  <p>Tapi semua itu pudar pelan-pelan ya, Feby?</p>
+
+  <p>
+    Padahal tiap jam yang kamu minta, selalu aku usahain buat kamu.<br>
+    Aku bangunin kamu tiap pagi buat mandi terus make up, ingetin kamu makan, temenin kamu begadang, temenin kamu sendirian, karena aku ga bisa biarin kamu sendirian.<br>
+    Gak ada yang aku minta lebih, cuma pengen kamu tau ada orang yang sayang sama kamu segitunya.
+  </p>
+
+  <p>
+    Aku tau kamu berubah bukan karena kamu jahat.<br>
+    Kamu berubah karena <b>salah paham aja.</b><br>
+    Dan salah paham itu yang bikin kamu ninggalin orang yang paling tulus sama kamu.<br>
+    Dan aku minta maaf banget sama kamu kalo udah bikin kamu sakit hati,
+  </p>
+
+  <p class="italic">
+    Sekarang udah ada pengganti aku yang mungkin lebih baik dari aku, sekarang udah ada yang nemenin kamu tidur, bangunin kamu, ucapin selamat tidur dan doa tidur,<br>
+    ada dia ya sekarang yg ingetin kamu makan, gak ada yang ngajak ketawa gila lagi,<br>
+    kamu bakal inget, pernah ada aku yang ngelakuin itu semua tanpa disuruh.
+  </p>
+
+  <div class="line"></div>
+  <p>Aku gak benci kamu, Feby. Aku cuma kangen versi kita yang dulu. Gapapa mungkin Feby ga pengen bareng bareng sama aku, aku banyak kurang nya ya hehe☺️<br>
+  Feby mungkin belum mengerti sekarang, mungkin di lain waktu nanti ya☺️<br>
+  Dan sekarang aku emang harus berusaha lupain semua nya tentang kita, relain kamu sama pilihan kamu hmm sedih nya🥺 tapi aku harus ikhlas☺️ Feby juga udah besar udah dewasa juga tau pilihan yg terbaik untuk Feby kan ya🥺.</p>
+  <p class="small">DARI AKU YANG SELALU SAYANG</p>
+</div>
+
+<script>
+const music = document.getElementById('bgMusic');
+const btn = document.getElementById('musicBtn');
+let playing = false;
+function playMusic(){
+  music.volume = 0.5;
+  music.play().then(()=>{playing=true;btn.innerText='⏸️';}).catch(()=>{});
+}
+btn.onclick = ()=>{
+  if(playing){music.pause();playing=false;btn.innerText='🎵';}
+  else{playMusic();}
+};
+document.body.addEventListener('click', function once(){
+  if(!playing) playMusic();
+  document.body.removeEventListener('click', once);
+}, {once:true});
+</script>
+
+</body>
+</html>
